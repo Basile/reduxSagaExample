@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Container, Row, Col} from 'react-bootstrap';
 import EntityListContainer from './container/EntityListContainer';
+import ButtonListContainer from './container/ButtonListContainer';
 
 class App extends Component {
   render() {
@@ -8,13 +9,11 @@ class App extends Component {
       <Container>
         <Row>
           <Col>
-            <Row>
-              <Col>
-                <EntityListContainer />
-              </Col>
-            </Row>
+            <EntityListContainer />
           </Col>
-          <Col></Col>
+          <Col>
+            <ButtonListContainer />
+          </Col>
           <Col></Col>
         </Row>
       </Container>

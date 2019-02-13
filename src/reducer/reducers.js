@@ -10,6 +10,7 @@ const initialState = {
   }],
   error: '',
   congrats: false,
+  allButtonsClicked: false,
 };
 
 export const reducers = (state = initialState, action) => {
@@ -29,6 +30,10 @@ export const reducers = (state = initialState, action) => {
     case actionTypes.ENTITY_CONGRATS:
       return Object.assign({}, state, {
         congrats: true
+      });
+    case actionTypes.BUTTONS_CLICK:
+      return Object.assign({}, state, {
+        allButtonsClicked: true
       });
     default:
       return state;

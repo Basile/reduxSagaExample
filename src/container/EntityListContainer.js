@@ -1,5 +1,4 @@
 import { connect } from 'react-redux';
-import { put } from 'redux-saga/effects'
 import * as actionTypes from '../reducer/actionTypes';
 import EntityList from '../component/EntityList';
 

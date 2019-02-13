@@ -48,11 +48,21 @@ function* watchFirstTenEntitiesCreated() {
   yield put({type: actionTypes.ENTITY_CONGRATS})
 }
 
+function* watchAllButtonsClicked() {
+  yield all([
+    take(actionTypes.BUTTON_1_CLICK),
+    take(actionTypes.BUTTON_2_CLICK),
+    take(actionTypes.BUTTON_3_CLICK),
+  ]);
+  yield put({type: actionTypes.BUTTONS_CLICK})
+}
+
 export default function* rootSaga() {
   yield all([
     watchGetEntity(),
     watchGetEntityError(),
     watchFirstTenEntitiesCreated(),
+    watchAllButtonsClicked(),
   ]);
 
   // let task1 = yield fork(watchGetEntity);
